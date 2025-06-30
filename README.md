@@ -45,9 +45,9 @@ t = merp.at(bounce, 0.6)
 You can also export all available aliases to globals by using `aliasToGlobals` for ease of access, check above for available aliases:
 ```javascript
 // Use aliases globally (optional)
-merp.aliasToGlobals         // Makes lerp, slerp, etc. available as globals
+merp.aliasToGlobals // Makes lerp, slerp, etc. available as globals
 
-lerp 0, 100, 0.5       // Returns 50 (linear interpolation)
+lerp 0, 100, 0.5 // Returns 50 (linear interpolation)
 herm 10.0, 20.0, 5.0, 0.0, 0.5 // Returns 15.625
 ```
 
