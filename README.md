@@ -18,7 +18,7 @@ Mathematical interpolation and easing functions for smooth value transitions.
 ## Basic Usage
 ```javascript
 // Use aliases globally (optional)
-aliasToGlobals         // Makes lerp, slerp, etc. available as globals
+merp.aliasToGlobals         // Makes lerp, slerp, etc. available as globals
 
 lerp(0, 100, 0.5)        // Returns 50 (linear interpolation)
 smoothLinear(0, 100, 0.5) // Returns 25 (with easing)
