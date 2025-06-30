@@ -1,4 +1,4 @@
-# Interpolation Library
+# a Miniscript Interpolation Library
 
 Mathematical interpolation and easing functions for smooth value transitions.
 
