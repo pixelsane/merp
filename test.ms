@@ -1,0 +1,3 @@
+import "merp"
+
+merp.aliasToGlobals
