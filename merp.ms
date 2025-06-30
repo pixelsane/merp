@@ -29,7 +29,7 @@ snapDown = function(x, step)
 end function
 
 snapUp = function(x, step)
-	return ceil(x / step) * step
+	return ceil(x / step) * steph
 end function
 
 bias = function(t, b)
