@@ -20,13 +20,13 @@ This is an extremely simple usage example! I will be adding more practical and a
 ```javascript
 import "merp"
 // Smoothly animate a progress value using exponential ease-in
-rawProgress = merp.easeInExpo(0.4)                // Returns ~0.028
+rawProgress = merp.easeInExpo(0.4) // Returns ~0.028
 
 // Scale it to a range and snap it to nearest 5
-scaled = merp.snap(merp.lerp(0, 100, rawProgress), 5)  // Returns 0
+scaled = merp.snap(merp.lerp(0, 100, rawProgress), 5) // Returns 0
 
 // Clamp an overshooting value to keep it visible on screen
-clamped = merp.clamp(112, 0, 100)                 // Returns 100
+clamped = merp.clamp(112, 0, 100) // Returns 100
 
 // Remap mouse position (x) to screen brightness using a circular easing out, notice how we are trying to prevent function calls with @
 brightness = merp.remapWithEasing(mouse.x, 0, screen.width, 0, 255, @merp.easeOutCirc)
