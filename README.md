@@ -38,7 +38,7 @@ angle = merp.linearAngle(player.rotation, target.rotation, 0.2)
 bounce = merp.makeTween(0, 1, @merp.easeOutBounce)
 
 // Returns value with bounce at 60% of tween
-t = merp.at(bounce, 0.6)
+t = merp.at(bounce.to, 0.6)
 ```
 
 ### Export to Globals
