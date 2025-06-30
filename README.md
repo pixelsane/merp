@@ -21,17 +21,24 @@ This is an extremely simple usage example! I will be adding more practical and a
 import "merp"
 // Smoothly animate a progress value using exponential ease-in
 rawProgress = merp.easeInExpo(0.4)                // Returns ~0.028
+
 // Scale it to a range and snap it to nearest 5
 scaled = merp.snap(merp.lerp(0, 100, rawProgress), 5)  // Returns 0
+
 // Clamp an overshooting value to keep it visible on screen
 clamped = merp.clamp(112, 0, 100)                 // Returns 100
-// Remap mouse position (x) to screen brightness using a circular easing out
-brightness = merp.remapWithEasing(mouse.x, 0, screen.width, 0, 255, merp.easeOutCirc)
+
+// Remap mouse position (x) to screen brightness using a circular easing out, notice how we are trying to prevent function calls with @
+brightness = merp.remapWithEasing(mouse.x, 0, screen.width, 0, 255, @merp.easeOutCirc)
+
 // Interpolate between two angles, making sure rotation is minimal
 angle = merp.linearAngle(player.rotation, target.rotation, 0.2)
+
 // Create a bouncy tween and sample it over time
-bounce = merp.makeTween(0, 1, merp.easeOutBounce)
-t = bounce.at(0.6)                                // Returns value with bounce at 60% of tween
+bounce = merp.makeTween(0, 1, @merp.easeOutBounce)
+
+// Returns value with bounce at 60% of tween
+t = merp.at(bounce, 0.6)
 ```
 
 ### Export to Globals
