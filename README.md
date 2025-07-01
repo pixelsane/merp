@@ -2,27 +2,6 @@
 
 Mathematical interpolation and easing functions for smooth value transitions.
 
-## Available Functions
-### Core Interpolation
-linear • lerp • mix • smoothLinear • smoothlerp • slerp • inverseLinear • invlerp
-
-### Curves & Bezier
-bezier3 • bez3 • bezier4 • bez4 • bezierN • bezn • hermite • herm • catmullRom • catmull • crom
-
-### Easing Functions
-easeInQuad • easeOutBounce • easeInExpo • easeOutExpo • easeInCirc • easeOutCirc • easeInBack • easeOutBack
-
-### Smooth Transitions
-smoothStep • sstep • smootherStep • ssstep • smoothStepRange • sstepr • smootherStepRange • ssstepr
-
-### Utilities
-clamp • saturate • snap • snapDown • snapUp • bias • gain • remapWithEasing
-
-### Angles & Tweens
-linearAngle • lerpangle • angleDistance • angledistance • makeTween • at
-Advanced
-interpolate • aliasToGlobals
-
 ## Basic Usage
 This is an extremely simple usage example! I will be adding more practical and actual project based examples soon.
 ```javascript
@@ -48,6 +27,8 @@ bounce = merp.makeTween(0, 1, @merp.easeOutBounce)
 // Returns value with bounce at 60% of tween
 t = merp.at(bounce.to, 0.6)
 ```
+
+---
 
 ### Export to Globals
 You can also export all available aliases to globals by using `aliasToGlobals` for ease of access, check above for available aliases:
@@ -80,5 +61,28 @@ cameraX = lerp(cameraX, playerX, 0.1)
 // UI fade effects  
 opacity = lerp(0, 1, fadeProgress)
 ```
+
+---
+
+## Available Functions
+### Core Interpolation
+linear • lerp • mix • smoothLinear • smoothlerp • slerp • inverseLinear • invlerp
+
+### Curves & Bezier
+bezier3 • bez3 • bezier4 • bez4 • bezierN • bezn • hermite • herm • catmullRom • catmull • crom
+
+### Easing Functions
+easeInQuad • easeOutBounce • easeInExpo • easeOutExpo • easeInCirc • easeOutCirc • easeInBack • easeOutBack
+
+### Smooth Transitions
+smoothStep • sstep • smootherStep • ssstep • smoothStepRange • sstepr • smootherStepRange • ssstepr
+
+### Utilities
+clamp • saturate • snap • snapDown • snapUp • bias • gain • remapWithEasing
+
+### Angles & Tweens
+linearAngle • lerpangle • angleDistance • angledistance • makeTween • at
+Advanced
+interpolate • aliasToGlobals
 
 Browse the code for more functions: easing curves, Bézier interpolation, utilities, and aliases.
