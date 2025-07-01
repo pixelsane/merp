@@ -60,7 +60,7 @@ easeInQuad = function(t)
 end function
 
 easeOutBounce = function(tempT)
-	// Robert penner's easing equation
+	// Robert penners easing equation
 	// Emulates a bouncing ball
 	t = tempT + 0.0
 	if t < 1 / 2.75 then
@@ -186,6 +186,16 @@ smootherStep = function(a, b, t)
 	return x * x * x * (x * (x * 6 - 15) + 10)
 end function
 
+smoothStepRange = function(inputValue, inputMin, inputMax)
+	t = clamp((inputValue - inputMin) / (inputMax - inputMin), 0.0, 1.0)
+	return t * t * (3 - 2 * t)
+end function
+
+smootherStepRange = function(inputValue, inputMin, inputMax)
+	t = clamp((inputValue - inputMin) / (inputMax - inputMin), 0.0, 1.0)
+	return t * t * t * (t * (t * 6 - 15) + 10)
+end function
+
 hermite = function(p0, p1, t0, t1, t)
 	t2 = t * t
 	t3 = t2 * t
@@ -246,6 +256,8 @@ bezn = @bezierN
 herm = @hermite
 ssstep = @smootherStep
 sstep = @smoothStep
+ssstepr = @smootherStepRange
+sstepr = @smoothStepRange
 qerp = @bezier3
 invlerp = @inverseLinear
 lerp = @linear
@@ -266,6 +278,8 @@ aliasToGlobals = function
 	globals.herm = @hermite
 	globals.ssstep = @smootherStep
 	globals.sstep = @smoothStep
+  globals.ssstepr = @smootherStepRange
+  globals.sstepr = @smoothStepRange
 	globals.qerp = @bezier3
 	globals.invlerp = @inverseLinear
 	globals.lerp = @linear
