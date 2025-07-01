@@ -2,6 +2,17 @@
 // There are no assertions or type safeties implemented (among params)
 // So, double check your arguments
 
+// Quick Start:
+//   lerp(a, b, t)           - linear interpolation
+//   smoothlerp(a, b, t)     - smooth interpolation  
+//   makeTween(from, to, easingFunc) - create reusable tween
+//
+// Common Gotchas:
+//   - smoothStep(a,b,t): a,b are INPUT range, t is the value to map
+//   - All angle functions expect degrees, not radians
+//   - bezierN expects a list/array of points
+
+
 // General Helpers
 clamp = function(x, min, max)
 	if x < min then

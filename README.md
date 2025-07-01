@@ -53,6 +53,17 @@ herm 10.0, 20.0, 5.0, 0.0, 0.5 // Returns 15.625
 
 The `t` parameter (0-1) represents animation progress: 0% to 100%.
 
+
+### Quick Start:
+- lerp(a, b, t)           - linear interpolation
+- smoothlerp(a, b, t)     - smooth interpolation  
+- makeTween(from, to, easingFunc) - create reusable tween
+
+### Common Gotchas:
+  - smoothStep(a,b,t): a,b are INPUT range, t is the value to map
+  - All angle functions expect degrees, not radians
+  - bezierN expects a list/array of points
+
 ## Common Use Cases
 ```javascript
 // Smooth camera follow
