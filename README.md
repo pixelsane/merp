@@ -3,17 +3,24 @@
 Mathematical interpolation and easing functions for smooth value transitions.
 
 ## Available Functions
-• aliasToGlobals
-• interpolate 
-• clamp • saturate • snap • snapDown • snapUp • bias • gain
-• remapWithEasing • easeInQuad • easeOutBounce • easeInExpo • easeOutExpo • easeInCirc • easeOutCirc • easeInBack • easeOutBack
-• linear • smoothLinear • inverseLinear
-• bezier3 • bezier4 • bezierN • smoothStep • smootherStep • hermite
-• linearAngle • angleDistance
-• catmullRom
-• makeTween • at • mix 
+### Core Interpolation
+linear • lerp • mix • smoothLinear • smoothlerp • slerp • inverseLinear • invlerp
 
-**Aliases:** smoothlerp • slerp • bezier1 • bez1 • bez3 • bez4 • bezn • herm • ssstep • sstep • qerp • invlerp • lerp • mix • lerpangle • angledistance • catmull • crom
+### Curves & Bezier
+bezier3 • bez3 • bezier4 • bez4 • bezierN • bezn • hermite • herm • catmullRom • catmull • crom
+
+### Easing Functions
+easeInQuad • easeOutBounce • easeInExpo • easeOutExpo • easeInCirc • easeOutCirc • easeInBack • easeOutBack
+Smooth Transitions
+smoothStep • sstep • smootherStep • ssstep • smoothStepRange • sstepr • smootherStepRange • ssstepr
+
+### Utilities
+clamp • saturate • snap • snapDown • snapUp • bias • gain • remapWithEasing
+
+### Angles & Tweens
+linearAngle • lerpangle • angleDistance • angledistance • makeTween • at
+Advanced
+interpolate • aliasToGlobals
 
 ## Basic Usage
 This is an extremely simple usage example! I will be adding more practical and actual project based examples soon.
