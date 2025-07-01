@@ -1,19 +1,29 @@
-// Hi PixelSane here, FYI everything here is functional
-// There are no assertions or type safeties implemented (among params)
+// Hi PixelSane here, FYI everything here is functional. No side effects except for alias injection.
+// and expect everything will have a deterministic return value.
+// =============================================================================
+// Also, here are no assertions or type safeties implemented (among params)
 // So, double check your arguments
 
-// Quick Start:
+
+// =============================================================================
+// QUICK START
+// =============================================================================
 //   lerp(a, b, t)           - linear interpolation
 //   smoothlerp(a, b, t)     - smooth interpolation  
 //   makeTween(from, to, easingFunc) - create reusable tween
-//
-// Common Gotchas:
+
+// =============================================================================
+// COMMON GOTCHAS
+// =============================================================================
 //   - smoothStep(a,b,t): a,b are INPUT range, t is the value to map
 //   - All angle functions expect degrees, not radians
 //   - bezierN expects a list/array of points
 
 
-// General Helpers
+// =============================================================================
+// GENERAL HELPERS
+// =============================================================================
+
 clamp = function(x, min, max)
 	if x < min then
 		return min 
@@ -65,7 +75,9 @@ min = function(a, b)
 	end if
 end function
 
-// Ease Functions
+// args: num, num, num, num, num, function(t)
+// EASING FUNTIONS/HELPERS
+// args: num, num, num, num, num, function(t)
 easeInQuad = function(t)
 	return t * t	
 end function
@@ -145,7 +157,9 @@ interpolate = function(ease, interp)
 end function
 
 
-// Interpolation Functions
+// =============================================================================
+// MAIN INTERPOLATION FUNCTIONS
+// =============================================================================
 linear = function(a, b, t)
 	return a + (b - a) * t
 end function
@@ -172,7 +186,6 @@ bezier4 = function(a, b, c, d, t)
 	ttt = tt * t
 	return uuu * a + 3 * uu * t * b + 3 * u * tt * c + ttt * d
 end function
-
 
 // n-point bezier (DC): interpolates between points, so remember to pass a list!
 bezierN = function(points, t)
@@ -217,7 +230,9 @@ hermite = function(p0, p1, t0, t1, t)
 	return h00 * p0 + h10 * t0 + h01 * p1 + h11 * t1
 end function
 
-// Angle Interpolation
+// =============================================================================
+// ANGLE INTERPOLATION
+// =============================================================================
 linearAngle = function(a, b, t)
 	diff = b - a
 	if abs(diff) > 180 then
@@ -235,7 +250,9 @@ angleDistance = function(a, b)
 	return min(diff, 360 - diff)
 end function
 
-// Spline
+// =============================================================================
+// SPLINE
+// =============================================================================
 catmullRom = function(p0, p1, p2, p3, t)
 	t2 = t * t
 	t3 = t2 * t
@@ -246,7 +263,9 @@ catmullRom = function(p0, p1, p2, p3, t)
 end function
 
 
-// Tween Helpers
+// =============================================================================
+// TWEEN HELPERS
+// =============================================================================
 makeTween = function(a, b, e) 
 	// e has to be a function
 	return {"from": a, "to": b, "easing": @e}
@@ -256,7 +275,9 @@ at = function(tween, t)
 	return linear(tween.from, tween.to, tween.easing(t))
 end function
 
-// Aliases
+// =============================================================================
+// ALIASES: All the shorthand versions
+// =============================================================================
 smoothlerp = @smoothLinear
 slerp = @smoothLinear
 bezier1 = @linear
