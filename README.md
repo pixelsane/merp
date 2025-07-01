@@ -42,26 +42,6 @@ herm 10.0, 20.0, 5.0, 0.0, 0.5 // Returns 15.625
 
 The `t` parameter (0-1) represents animation progress: 0% to 100%.
 
-
-### Quick Start:
-- lerp(a, b, t)           - linear interpolation
-- smoothlerp(a, b, t)     - smooth interpolation  
-- makeTween(from, to, easingFunc) - create reusable tween
-
-### Common Gotchas:
-  - smoothStep(a,b,t): a,b are INPUT range, t is the value to map
-  - All angle functions expect degrees, not radians
-  - bezierN expects a list/array of points
-
-## Common Use Cases
-```javascript
-// Smooth camera follow
-cameraX = lerp(cameraX, playerX, 0.1)
-
-// UI fade effects  
-opacity = lerp(0, 1, fadeProgress)
-```
-
 ---
 
 ## Available Functions
@@ -84,5 +64,27 @@ clamp • saturate • snap • snapDown • snapUp • bias • gain • remapW
 linearAngle • lerpangle • angleDistance • angledistance • makeTween • at
 Advanced
 interpolate • aliasToGlobals
+
+---
+
+### Quick Start:
+- lerp(a, b, t)           - linear interpolation
+- smoothlerp(a, b, t)     - smooth interpolation  
+- makeTween(from, to, easingFunc) - create reusable tween
+
+### Common Gotchas:
+  - smoothStep(a,b,t): a,b are INPUT range, t is the value to map
+  - All angle functions expect degrees, not radians
+  - bezierN expects a list/array of points
+
+## Common Use Cases
+```javascript
+// Smooth camera follow
+cameraX = lerp(cameraX, playerX, 0.1)
+
+// UI fade effects  
+opacity = lerp(0, 1, fadeProgress)
+```
+---
 
 Browse the code for more functions: easing curves, Bézier interpolation, utilities, and aliases.
