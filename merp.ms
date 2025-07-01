@@ -25,11 +25,13 @@ snap = function(x, step)
 end function
 
 snapDown = function(x, step)
+	if step == 0 then return x
 	return floor(x / step) * step
 end function
 
 snapUp = function(x, step)
-	return ceil(x / step) * steph
+	if step == 0 then return x
+	return ceil(x / step) * step
 end function
 
 bias = function(t, b)
@@ -142,6 +144,7 @@ end function
 smoothLinear = interpolate(@easeInQuad, @linear)
 
 inverseLinear = function(a, b, v)
+	if a == b then return 0
 	return (v - a) / (b - a)
 end function
 
