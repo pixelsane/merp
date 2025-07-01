@@ -46,7 +46,7 @@ The `t` parameter (0-1) represents animation progress: 0% to 100%.
 
 ## Available Functions
 ### Core Interpolation
-linear • lerp • mix • smoothLinear • smoothlerp • slerp • inverseLinear • invlerp
+linear • smoothLinear • smoothStep • inverseLinear
 
 ### Curves & Bezier
 bezier3 • bez3 • bezier4 • bez4 • bezierN • bezn • hermite • herm • catmullRom • catmull • crom
