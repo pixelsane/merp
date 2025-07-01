@@ -3,7 +3,8 @@
 Mathematical interpolation and easing functions for smooth value transitions.
 
 ## Basic Usage
-This is an extremely simple usage example! I will be adding more practical and actual project based examples soon.
+This is an extremely simple usage example! Please head onto the examples to learn more about merp.
+
 ```javascript
 import "merp"
 // Smoothly animate a progress value using exponential ease-in
@@ -81,13 +82,11 @@ smoothlerp • slerp • bezier1 • bez1 • bez3 • bez4 • bezn • herm �
   - All angle functions expect degrees, not radians
   - bezierN expects a list/array of points
 
-## Common Use Cases
-```javascript
-// Smooth camera follow
-cameraX = lerp(cameraX, playerX, 0.1)
-
-// UI fade effects  
-opacity = lerp(0, 1, fadeProgress)
+## Examples
+To run examples, boot or copy to your Minimicro directory and then run the example from the /merp/ directory. (Not in the /examples/ directory)
+```bash
+cd "/usr/merp"
+run "examples/rocketlander"
 ```
 ---
 
