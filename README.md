@@ -11,7 +11,8 @@ bezier3 • bez3 • bezier4 • bez4 • bezierN • bezn • hermite • herm 
 
 ### Easing Functions
 easeInQuad • easeOutBounce • easeInExpo • easeOutExpo • easeInCirc • easeOutCirc • easeInBack • easeOutBack
-Smooth Transitions
+
+### Smooth Transitions
 smoothStep • sstep • smootherStep • ssstep • smoothStepRange • sstepr • smootherStepRange • ssstepr
 
 ### Utilities
