@@ -59,7 +59,7 @@ simulate = function
 		currentTime += dt
 		
 		t = currentTime / landingTime
-		t = clamp(t, 0, 1)
+		t = merp.clamp(t, 0, 1)
 		
 		prevX = rocket.x
 		prevY = rocket.y
