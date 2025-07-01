@@ -46,24 +46,28 @@ The `t` parameter (0-1) represents animation progress: 0% to 100%.
 
 ## Available Functions
 ### Core Interpolation
-linear • smoothLinear • smoothStep • inverseLinear
+linear • smoothLinear • inverseLinear
 
 ### Curves & Bezier
-bezier3 • bez3 • bezier4 • bez4 • bezierN • bezn • hermite • herm • catmullRom • catmull • crom
+bezier3 • bezier4 • bezierN • hermite • catmullRom
 
 ### Easing Functions
 easeInQuad • easeOutBounce • easeInExpo • easeOutExpo • easeInCirc • easeOutCirc • easeInBack • easeOutBack
 
 ### Smooth Transitions
-smoothStep • sstep • smootherStep • ssstep • smoothStepRange • sstepr • smootherStepRange • ssstepr
+smoothStep • smootherStep • smoothStepRange • smootherStepRange
 
 ### Utilities
 clamp • saturate • snap • snapDown • snapUp • bias • gain • remapWithEasing
 
 ### Angles & Tweens
-linearAngle • lerpangle • angleDistance • angledistance • makeTween • at
-Advanced
+linearAngle • angleDistance • makeTween • at
+
+### Advanced
 interpolate • aliasToGlobals
+
+**Aliases:**
+smoothlerp • slerp • bezier1 • bez1 • bez3 • bez4 • bezn • herm • ssstep • sstep • ssstepr • sstepr • qerp • invlerp • lerp • mix • lerpangle • angledistance • catmull • crom
 
 ---
 
