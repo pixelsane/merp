@@ -16,7 +16,8 @@ scaled = merp.snap(merp.lerp(0, 100, rawProgress), 5) // Returns 0
 // Clamp an overshooting value to keep it visible on screen
 clamped = merp.clamp(112, 0, 100) // Returns 100
 
-// Remap mouse position (x) to screen brightness using a circular easing out, notice how we are trying to prevent function calls with @
+// Remap mouse position (x) to screen brightness using a circular easing out
+// notice how we are trying to prevent function calls with @
 brightness = merp.remapWithEasing(mouse.x, 0, screen.width, 0, 255, @merp.easeOutCirc)
 
 // Interpolate between two angles, making sure rotation is minimal
@@ -35,6 +36,7 @@ t = merp.at(bounce.to, 0.6)
 You can also export all available aliases to globals by using `aliasToGlobals` for ease of access, check above for available aliases:
 ```javascript
 // Use aliases globally (optional)
+
 merp.aliasToGlobals // Makes lerp, slerp, etc. available as globals
 
 lerp 0, 100, 0.5 // Returns 50 (linear interpolation)
@@ -62,13 +64,13 @@ smoothStep • smootherStep • smoothStepRange • smootherStepRange
 clamp • saturate • snap • snapDown • snapUp • bias • gain • remapWithEasing
 
 ### Angles & Tweens
-linearAngle • angleDistance • makeTween • at
+linearAngle • smoothAngle • angleDistance • meanAngle • angleDiff • makeTween • at
 
 ### Advanced
 interpolate • aliasToGlobals
 
 **Aliases:**
-smoothlerp • slerp • bezier1 • bez1 • bez3 • bez4 • bezn • herm • ssstep • sstep • ssstepr • sstepr • qerp • invlerp • lerp • mix • lerpangle • angledistance • catmull • crom
+smoothlerp • slerp • bezier1 • bez1 • bez3 • bez4 • bezn • herm • ssstep • sstep • ssstepr • sstepr • qerp • invlerp • lerp • mix • lerpangle • sangle • slerpangle • angledistance • mangle • anglediff • catmull • crom
 
 ---
 
