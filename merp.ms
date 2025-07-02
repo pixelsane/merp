@@ -230,7 +230,6 @@ hermite = function(p0, p1, t0, t1, t)
 	return h00 * p0 + h10 * t0 + h01 * p1 + h11 * t1
 end function
 
-// NIR
 pingPong = function(t)
   fraction = t mod 2
   return fraction < 1 and fraction or 2 - fraction
@@ -251,12 +250,10 @@ linearAngle = function(a, b, t)
 	return a + diff * t
 end function
 
-// NIR
 smoothAngle = function(a, b, t)
   return linearAngle(a, b, smoothStep(t))
 end function
 
-// NIR
 pingPongAngle = function(a,b,t)
   return linearAngle(a, b, pingPong(t))
 end function
@@ -266,7 +263,6 @@ angleDistance = function(a, b)
 	return min(diff, 360 - diff)
 end function
 
-// NIR
 meanAngle = function(angles)
   findAngle = function(a, i = 0, sx = 0, sy = 0)
     if i > a.len - 1 then
@@ -279,7 +275,6 @@ meanAngle = function(angles)
   return findAngle(angles)
 end function
 
-// NIR
 function angleDiff(a, b)
 	return ((b - a + pi) % (2 * pi)) - pi
 end
