@@ -231,8 +231,8 @@ hermite = function(p0, p1, t0, t1, t)
 end function
 
 pingPong = function(t)
-  fraction = t mod 2
-  return fraction < 1 and fraction or 2 - fraction
+	fraction = t % 2
+	return fraction < 1 and fraction or 2 - fraction
 end function
 
 // =============================================================================
@@ -251,11 +251,11 @@ linearAngle = function(a, b, t)
 end function
 
 smoothAngle = function(a, b, t)
-  return linearAngle(a, b, smoothStep(t))
+	return linearAngle(a, b, smoothStep(t))
 end function
 
 pingPongAngle = function(a,b,t)
-  return linearAngle(a, b, pingPong(t))
+	return linearAngle(a, b, pingPong(t))
 end function
 
 angleDistance = function(a, b)
@@ -264,20 +264,20 @@ angleDistance = function(a, b)
 end function
 
 meanAngle = function(angles)
-  findAngle = function(a, i = 0, sx = 0, sy = 0)
-    if i > a.len - 1 then
-      return atan(sy, sx)
-    end if
-    angle = a[i]
-    return findAngle(a, i + 1, sx + cos(angle), sy + sin(angle))
-  end function
-
-  return findAngle(angles)
+	findAngle = function(a, i = 0, sx = 0, sy = 0)
+		if i > a.len - 1 then
+			return atan(sy, sx)
+		end if
+		angle = a[i]
+		return findAngle(a, i + 1, sx + cos(angle), sy + sin(angle))
+	end function
+	
+	return findAngle(angles)
 end function
 
-function angleDiff(a, b)
+angleDiff = function(a, b)
 	return ((b - a + pi) % (2 * pi)) - pi
-end
+end function
 
 // =============================================================================
 // SPLINE
@@ -330,7 +330,7 @@ crom = @catmullRom
 sangle = @smoothAngle
 slerpangle = @smoothAngle
 mangle = @meanAngle
-anglediff = @anglediff
+anglediff = @angleDiff
 
 aliasToGlobals = function
 	globals.smoothlerp = @smoothLinear
@@ -349,11 +349,11 @@ aliasToGlobals = function
 	globals.invlerp = @inverseLinear
 	globals.lerp = @linear
 	globals.lerpangle = @linearAngle
-  globals.sangle = @smoothAngle
-  globals.slerpangle = @smoothAngle
+	globals.sangle = @smoothAngle
+	globals.slerpangle = @smoothAngle
 	globals.angledistance = @angleDistance
-  globals.mangle = @meanAngle
-  globals.anglediff = @anglediff
+	globals.mangle = @meanAngle
+	globals.anglediff = @angleDiff
 	globals.catmull = @catmullRom
 	globals.crom = @catmullRom 
 	globals.mix = @linear
