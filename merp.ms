@@ -75,7 +75,6 @@ min = function(a, b)
 	end if
 end function
 
-// args: num, num, num, num, num, function(t)
 // EASING FUNTIONS/HELPERS
 // args: num, num, num, num, num, function(t)
 easeInQuad = function(t)
