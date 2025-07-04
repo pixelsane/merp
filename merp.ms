@@ -76,7 +76,6 @@ min = function(a, b)
 end function
 
 // EASING FUNTIONS/HELPERS
-// args: num, num, num, num, num, function(t)
 easeInQuad = function(t)
 	return t * t	
 end function
